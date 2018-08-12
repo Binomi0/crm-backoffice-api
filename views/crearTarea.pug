@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+	body
+		h1 Crear nueva Tarea
+		form(action="/tareas/nuevo" method="post")
+			input(type="text" name="cliente" placeholder="Cliente" required)
+			br
+			input(type="text" name="agente" placeholder="Agente" required)
+			br
+			input(type="text" name="titulo" placeholder="Título" required)
+			br
+			label(for="terminada") Terminada
+			input(type="checkbox" id='terminada' name="terminada")
+			br
+			textarea(name="descripcion" rows="4" cols="50" placeholder="Descripción" required)
+			br
+			input(type="submit" value="Agregar Nueva Tarea")
+
+	script.
